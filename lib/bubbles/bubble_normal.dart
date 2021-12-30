@@ -18,7 +18,7 @@ class BubbleNormal extends StatelessWidget {
   final double bubbleRadius;
   final bool isSender;
   final Color color;
-  final String text;
+  final Widget child;
   final bool tail;
   final bool sent;
   final bool delivered;
@@ -27,7 +27,7 @@ class BubbleNormal extends StatelessWidget {
 
   BubbleNormal({
     Key? key,
-    required this.text,
+    required this.child,
     this.bubbleRadius = BUBBLE_RADIUS,
     this.isSender = true,
     this.color = Colors.white70,
@@ -110,11 +110,7 @@ class BubbleNormal extends StatelessWidget {
                     padding: stateTick
                         ? EdgeInsets.fromLTRB(12, 6, 28, 6)
                         : EdgeInsets.symmetric(vertical: 6, horizontal: 12),
-                    child: Text(
-                      text,
-                      style: textStyle,
-                      textAlign: TextAlign.left,
-                    ),
+                    child: child,
                   ),
                   stateIcon != null && stateTick
                       ? Positioned(
