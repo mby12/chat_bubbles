@@ -1,5 +1,7 @@
 # chat_bubbles plugin
 
+this is the modified version by mby, the difference is not only text string, but any widget can be used for the bubble content.
+
 ![Pub Version](https://img.shields.io/pub/v/chat_bubbles?color=blue)
 ![likes](https://badges.bar/chat_bubbles/likes)
 ![popularity](https://badges.bar/chat_bubbles/popularity)
@@ -123,7 +125,10 @@ Checkout the plugin example to figure out more.
                 sent: true,
               ),
               BubbleNormal(
-                text: 'bubble normal with tail',
+                child: Text(
+                  'bubble normal with tail',
+                  style: TextStyle(color: Colors.white),
+                ),
                 isSender: false,
                 color: Color(0xFF1B97F3),
                 tail: true,
@@ -133,7 +138,10 @@ Checkout the plugin example to figure out more.
                 ),
               ),
               BubbleNormal(
-                text: 'bubble normal with tail',
+                child: Text(
+                  'bubble normal with tail',
+                  style: TextStyle(color: Colors.white),
+                )
                 isSender: true,
                 color: Color(0xFFE8E8EE),
                 tail: true,
@@ -143,7 +151,10 @@ Checkout the plugin example to figure out more.
                 date: new DateTime(now.year, now.month, now.day - 2),
               ),
               BubbleNormal(
-                text: 'bubble normal without tail',
+                child: Text(
+                  'bubble normal with tail',
+                  style: TextStyle(color: Colors.white),
+                )
                 isSender: false,
                 color: Color(0xFF1B97F3),
                 tail: false,
@@ -153,7 +164,10 @@ Checkout the plugin example to figure out more.
                 ),
               ),
               BubbleNormal(
-                text: 'bubble normal without tail',
+                child: Text(
+                  'bubble normal with tail',
+                  style: TextStyle(color: Colors.white),
+                )
                 color: Color(0xFFE8E8EE),
                 tail: false,
                 sent: true,
